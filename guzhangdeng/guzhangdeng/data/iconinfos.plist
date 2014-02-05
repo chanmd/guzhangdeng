@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>name</key>
+		<string>发动机警告灯</string>
+		<key>image</key>
+		<string>1.jpg</string>
+		<key>meaning</key>
+		<string>发动机故障或是燃油耗尽</string>
+		<key>wtd</key>
+		<string>如果不是燃油原因，请联系您的经销商。</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>发动机温度警告灯</string>
+		<key>image</key>
+		<string>2.jpg</string>
+		<key>meaning</key>
+		<string>发动机温度过高</string>
+		<key>wtd</key>
+		<string>停车关闭发动机，当故障灯消失以后才可以继续启动。如有需要，联系您的经销商。</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>ESP故障</string>
+		<key>image</key>
+		<string>3.jpg</string>
+		<key>meaning</key>
+		<string>同文字，并阅读具体故障信息</string>
+		<key>wtd</key>
+		<string>请小心驾驶，并联系您的经销商</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>自动远光灯</string>
+		<key>image</key>
+		<string>4.jpg</string>
+		<key>meaning</key>
+		<string>自动远光灯功能开启</string>
+		<key>wtd</key>
+		<string>当自动远光灯开启后，车辆前灯将根据情况自动调整远光和近光灯。</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>玻璃清洗液需加注</string>
+		<key>image</key>
+		<string>5.jpg</string>
+		<key>meaning</key>
+		<string>需加注玻璃清洗液</string>
+		<key>wtd</key>
+		<string>点击这里，买一打送到家。</string>
+	</dict>
+</array>
+</plist>
