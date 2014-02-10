@@ -36,14 +36,13 @@
     [super viewDidLoad];
     self.title = [warninglightEntity objectForKey:@"name"];
     
-    [self performSelector:@selector(drawLayout) withObject:nil afterDelay:0.5];
-    
+    [self performSelector:@selector(drawLayout) withObject:nil afterDelay:0.3];
 }
 
 - (void)drawLayout
 {
     UIImageView *imageview = [[UIImageView alloc] initWithFrame:CGRectMake(10, 10 + FixY, 120, 120)];
-    NSString *imagename = [NSString stringWithFormat:@"%@.jpg", [warninglightEntity objectForKey:@"image"]];
+    NSString *imagename = [warninglightEntity objectForKey:@"image"];
     UIImage *image = [UIImage imageNamed:imagename];
     imageview.image = image;
     [self.view addSubview:imageview];

@@ -30,6 +30,7 @@
     tabbarcontroller.viewControllers = @[homenavigationcontroller, aboutnavigationcontroller];
     
     self.window.rootViewController = tabbarcontroller;
+    
     [self.window makeKeyAndVisible];
     
     return YES;

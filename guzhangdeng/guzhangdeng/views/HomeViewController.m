@@ -36,6 +36,11 @@
 - (id)init
 {
     self = [super init];
+    if (self) {
+        NSString *plistPath = [[NSBundle mainBundle] pathForResource:@"iconinfos" ofType:@"plist"];
+        NSArray *array = [[NSArray alloc] initWithContentsOfFile:plistPath];
+        self.icondata = array;
+    }
     return self;
 }
 
@@ -45,9 +50,8 @@
 	// Do any additional setup after loading the view.
     self.title = @"Warning Lights";
     
-    NSString *plistPath = [[NSBundle mainBundle] pathForResource:@"iconinfos" ofType:@"plist"];
-    NSArray *array = [[NSArray alloc] initWithContentsOfFile:plistPath];
-    self.icondata = array;
+    //data
+    
     
     self.image = [self cutCenterImage:[UIImage imageNamed:@"1.jpg"]  size:CGSizeMake(100, 100)];
     
@@ -70,7 +74,7 @@
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    int count = [self.icondata count] % 3;
+    int count = ceil([self.icondata count] / 3);
     return count;
 }
 
@@ -91,14 +95,16 @@
             //button.column = i;
             [button setValue:[NSNumber numberWithInt:i] forKey:@"column"];
             [button addTarget:self action:@selector(imageItemClick:) forControlEvents:UIControlEventTouchUpInside];
+            
             int thisindex = indexPath.row * 3 + i;
+            NSLog(@"%i %i", indexPath.row, thisindex);
             if (thisindex < self.icondata.count) {
                 NSDictionary * icondictionary = [self.icondata objectAtIndex:thisindex];
-                NSString * iconimagename = [icondictionary objectForKey:@"image"];
-                UIImage * iconimage = [UIImage imageNamed:[NSString stringWithFormat:@"%@.jpg", iconimagename]];
+                NSString *iconimagename = [icondictionary objectForKey:@"image"];
+                UIImage *iconimage = [UIImage imageNamed:iconimagename];
                 [button setBackgroundImage:iconimage forState:UIControlStateNormal];
             } else {
-//                [button setBackgroundImage:self.image forState:UIControlStateNormal];
+                [button setBackgroundImage:self.image forState:UIControlStateNormal];
             }
             
             
@@ -128,7 +134,7 @@
 -(void)imageItemClick:(UIImageButton *)button{
     
     int index = button.row * 3 + button.column;
-    NSLog(@"%d %d and index is %d", button.column, button.row, index);
+//    NSLog(@"%d %d and index is %d", button.column, button.row, index);
     if (index < self.icondata.count) {
         DetailViewController *detailviewcontroller = [[DetailViewController alloc] init];
         detailviewcontroller.warninglightEntity = [self.icondata objectAtIndex:index];
