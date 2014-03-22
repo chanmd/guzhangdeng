@@ -80,7 +80,7 @@
 
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    static NSString *identifier = @"Cell";
+    NSString *identifier = [NSString stringWithFormat:@"%d_%d", indexPath.section, indexPath.row];
     //自定义UITableGridViewCell，里面加了个NSArray用于放置里面的3个图片按钮
     UITableGridViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
     if (cell == nil) {
