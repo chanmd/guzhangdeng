@@ -24,7 +24,7 @@
     HomeViewController *homeviewcontroller = [[HomeViewController alloc] init];
     UINavigationController *homenavigationcontroller = [[UINavigationController alloc] initWithRootViewController:homeviewcontroller];
     
-    AboutViewController *aboutviewcontroller = [[AboutViewController alloc] init];
+    AboutViewController *aboutviewcontroller = [[AboutViewController alloc] initWithStyle:UITableViewStyleGrouped];
     UINavigationController *aboutnavigationcontroller = [[UINavigationController alloc] initWithRootViewController:aboutviewcontroller];
     
     tabbarcontroller.viewControllers = @[homenavigationcontroller, aboutnavigationcontroller];

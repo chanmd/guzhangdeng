@@ -34,9 +34,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self.view setBackgroundColor:[UIColor whiteColor]];
     self.title = [warninglightEntity objectForKey:@"name"];
     
-    [self performSelector:@selector(drawLayout) withObject:nil afterDelay:0.3];
+    [self drawLayout];
 }
 
 - (void)drawLayout

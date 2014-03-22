@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E85BEBF18DDD54D00473546 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E85BEBE18DDD54D00473546 /* AboutViewController.m */; };
 		6B17B58518A674C100A9276D /* iconinfostest.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6B17B58418A674C100A9276D /* iconinfostest.plist */; };
 		6B50F89018C87E4B0065B94B /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6B50F83C18C87E4B0065B94B /* 1.jpg */; };
 		6B50F89118C87E4B0065B94B /* 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6B50F83D18C87E4B0065B94B /* 2.jpg */; };
@@ -105,7 +106,6 @@
 		6BC68E5918A240EC00F93169 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6BC68E5718A240EC00F93169 /* InfoPlist.strings */; };
 		6BC68E5B18A240EC00F93169 /* guzhangdengTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC68E5A18A240EC00F93169 /* guzhangdengTests.m */; };
 		6BC68E6718A2419400F93169 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC68E6618A2419400F93169 /* HomeViewController.m */; };
-		6BC68E6A18A2471800F93169 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC68E6918A2471800F93169 /* AboutViewController.m */; };
 		6BC68E7018A256F600F93169 /* UIImageButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC68E6D18A256F600F93169 /* UIImageButton.m */; };
 		6BC68E7118A256F600F93169 /* UITableGridViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC68E6F18A256F600F93169 /* UITableGridViewCell.m */; };
 		6BC68E7418A258B400F93169 /* iconinfos.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6BC68E7318A258B400F93169 /* iconinfos.plist */; };
@@ -133,6 +133,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0E85BEBD18DDD54D00473546 /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AboutViewController.h; path = views/AboutViewController.h; sourceTree = "<group>"; };
+		0E85BEBE18DDD54D00473546 /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AboutViewController.m; path = views/AboutViewController.m; sourceTree = "<group>"; };
 		6B17B58418A674C100A9276D /* iconinfostest.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = iconinfostest.plist; path = data/iconinfostest.plist; sourceTree = "<group>"; };
 		6B50F83C18C87E4B0065B94B /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = "<group>"; };
 		6B50F83D18C87E4B0065B94B /* 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2.jpg; sourceTree = "<group>"; };
@@ -236,8 +238,6 @@
 		6BC68E5A18A240EC00F93169 /* guzhangdengTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = guzhangdengTests.m; sourceTree = "<group>"; };
 		6BC68E6518A2419400F93169 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomeViewController.h; path = views/HomeViewController.h; sourceTree = "<group>"; };
 		6BC68E6618A2419400F93169 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomeViewController.m; path = views/HomeViewController.m; sourceTree = "<group>"; };
-		6BC68E6818A2471800F93169 /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AboutViewController.h; path = views/AboutViewController.h; sourceTree = "<group>"; };
-		6BC68E6918A2471800F93169 /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AboutViewController.m; path = views/AboutViewController.m; sourceTree = "<group>"; };
 		6BC68E6C18A256F600F93169 /* UIImageButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIImageButton.h; sourceTree = "<group>"; };
 		6BC68E6D18A256F600F93169 /* UIImageButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIImageButton.m; sourceTree = "<group>"; };
 		6BC68E6E18A256F600F93169 /* UITableGridViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITableGridViewCell.h; sourceTree = "<group>"; };
@@ -463,10 +463,10 @@
 				6BC68E6B18A256F600F93169 /* elements */,
 				6BC68E6518A2419400F93169 /* HomeViewController.h */,
 				6BC68E6618A2419400F93169 /* HomeViewController.m */,
-				6BC68E6818A2471800F93169 /* AboutViewController.h */,
-				6BC68E6918A2471800F93169 /* AboutViewController.m */,
 				6BC68E8118A2622900F93169 /* DetailViewController.h */,
 				6BC68E8218A2622900F93169 /* DetailViewController.m */,
+				0E85BEBD18DDD54D00473546 /* AboutViewController.h */,
+				0E85BEBE18DDD54D00473546 /* AboutViewController.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -781,11 +781,11 @@
 				6BC68E4618A240EC00F93169 /* AppDelegate.m in Sources */,
 				6BC68EFA18A2959000F93169 /* NSArray+Extensions.m in Sources */,
 				6BC68E4218A240EC00F93169 /* main.m in Sources */,
-				6BC68E6A18A2471800F93169 /* AboutViewController.m in Sources */,
 				6BC68E7018A256F600F93169 /* UIImageButton.m in Sources */,
 				6BC68EFF18A2959000F93169 /* NSString+NoNull.m in Sources */,
 				6BC68EFE18A2959000F93169 /* NSString+Extensions.m in Sources */,
 				6BC68E6718A2419400F93169 /* HomeViewController.m in Sources */,
+				0E85BEBF18DDD54D00473546 /* AboutViewController.m in Sources */,
 				6BC68F0218A2959000F93169 /* UIColor+Aditions.m in Sources */,
 				6BC68E7118A256F600F93169 /* UITableGridViewCell.m in Sources */,
 				6BC68EF718A2959000F93169 /* AutoScrollLabel.m in Sources */,

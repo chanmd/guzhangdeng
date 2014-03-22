@@ -37,9 +37,7 @@
 {
     self = [super init];
     if (self) {
-        NSString *plistPath = [[NSBundle mainBundle] pathForResource:@"iconinfos" ofType:@"plist"];
-        NSArray *array = [[NSArray alloc] initWithContentsOfFile:plistPath];
-        self.icondata = array;
+        self.title = @"Warning Lights";
     }
     return self;
 }
@@ -48,9 +46,12 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    self.title = @"Warning Lights";
+    
     
     //data
+    NSString *plistPath = [[NSBundle mainBundle] pathForResource:@"iconinfos" ofType:@"plist"];
+    NSArray *array = [[NSArray alloc] initWithContentsOfFile:plistPath];
+    self.icondata = array;
     
     
     self.image = [self cutCenterImage:[UIImage imageNamed:@"1.jpg"]  size:CGSizeMake(100, 100)];
@@ -65,7 +66,12 @@
     self.tableView.delegate = self;
     self.tableView.backgroundColor = [UIColor clearColor];
     
-    
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    self.tabBarController.tabBar.hidden = NO;
 }
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
@@ -97,7 +103,6 @@
             [button addTarget:self action:@selector(imageItemClick:) forControlEvents:UIControlEventTouchUpInside];
             
             int thisindex = indexPath.row * 3 + i;
-            NSLog(@"%i %i", indexPath.row, thisindex);
             if (thisindex < self.icondata.count) {
                 NSDictionary * icondictionary = [self.icondata objectAtIndex:thisindex];
                 NSString *iconimagename = [icondictionary objectForKey:@"image"];
@@ -139,8 +144,10 @@
         DetailViewController *detailviewcontroller = [[DetailViewController alloc] init];
         detailviewcontroller.warninglightEntity = [self.icondata objectAtIndex:index];
         
-        [self setHidesBottomBarWhenPushed:YES];
+        self.tabBarController.tabBar.hidden = YES;
         [self.navigationController pushViewController:detailviewcontroller animated:YES];
+        
+        
     } else {
         //TODO
         //Nothing will gonna happe!
