@@ -10,6 +10,7 @@
 
 #import "HomeViewController.h"
 #import "AboutViewController.h"
+#import "AidViewController.h"
 
 @implementation AppDelegate
 
@@ -23,11 +24,18 @@
     
     HomeViewController *homeviewcontroller = [[HomeViewController alloc] init];
     UINavigationController *homenavigationcontroller = [[UINavigationController alloc] initWithRootViewController:homeviewcontroller];
+//    [homenavigationcontroller.tabBarController.tabBarItem setTitle:@"Warning Light"];
+    
+    AidViewController *aidviewcontroller = [[AidViewController alloc] init];
+    UINavigationController *aidnavigationcontroller = [[UINavigationController alloc] initWithRootViewController:aidviewcontroller];
+    
+    
     
     AboutViewController *aboutviewcontroller = [[AboutViewController alloc] initWithStyle:UITableViewStyleGrouped];
     UINavigationController *aboutnavigationcontroller = [[UINavigationController alloc] initWithRootViewController:aboutviewcontroller];
+//    [aboutnavigationcontroller.tabBarController.tabBarItem setTitle:@"About"];
     
-    tabbarcontroller.viewControllers = @[homenavigationcontroller, aboutnavigationcontroller];
+    tabbarcontroller.viewControllers = @[homenavigationcontroller, aidnavigationcontroller,aboutnavigationcontroller];
     
     self.window.rootViewController = tabbarcontroller;
     
